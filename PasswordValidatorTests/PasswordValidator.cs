@@ -17,7 +17,7 @@ namespace Validator.Tests
         [TestMethod]
         public void ValidPassword_ReturnsTrue()
         {
-            var result = _validator.IsValid("Test1234");
+            var result = _validator.IsValid("Test1234Test");
             Assert.IsTrue(result);
         }
 
