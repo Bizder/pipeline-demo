@@ -7,7 +7,7 @@
             if (string.IsNullOrEmpty(password))
                 return false;
 
-            if (password.Length < 12)
+            if (password.Length < 8)
                 return false;
 
             if (!password.Any(char.IsUpper))
