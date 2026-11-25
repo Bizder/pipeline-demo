@@ -17,14 +17,14 @@ namespace Validator.Tests
         [TestMethod]
         public void ValidPassword_ReturnsTrue()
         {
-            var result = _validator.IsValid("Test1234Test");
+            var result = _validator.IsValid("Test1234");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void TooShortPassword_ReturnsFalse()
+        pu	blic void TooShortPassword_ReturnsFalse()
         {
-            var result = _validator.IsValid("T1a");
+            var result = _validator.IsValid("T1aT1aT");
             Assert.IsFalse(result);
         }
 
