@@ -17,7 +17,7 @@ namespace Validator.Tests
         [TestMethod]
         public void ValidPassword_ReturnsTrue()
         {
-            var result = _validator.IsValid("Test1234");
+            var result = _validator.IsValid("Test1234Test");
             Assert.IsTrue(result);
         }
 
@@ -25,6 +25,13 @@ namespace Validator.Tests
         public void TooShortPassword_ReturnsFalse()
         {
             var result = _validator.IsValid("T1aT1aT");
+            Assert.IsFalse(result);
+        }
+		
+        [TestMethod]
+        public void TooShortPasswordLowerBoundary_ReturnsFalse()
+        {
+            var result = _validator.IsValid("Test1234Tes");
             Assert.IsFalse(result);
         }
 
