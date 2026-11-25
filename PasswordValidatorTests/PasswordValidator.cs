@@ -22,7 +22,7 @@ namespace Validator.Tests
         }
 
         [TestMethod]
-        pu	blic void TooShortPassword_ReturnsFalse()
+        public void TooShortPassword_ReturnsFalse()
         {
             var result = _validator.IsValid("T1aT1aT");
             Assert.IsFalse(result);
